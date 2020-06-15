@@ -8,8 +8,9 @@ const cap = str => {
   let arr = str.split(' ');
   let newArr = [];
   for (let word of arr) {
-    let capLetter = word.charAt(0).toUpperCase();
-    newArr.push(word.replace(word.charAt(0), capLetter));
+    let firstLetter = word.charAt(0);
+    let capFirstLetter = firstLetter.toUpperCase();
+    newArr.push(word.replace(firstLetter, capFirstLetter));
   }
   return newArr.join(' ');
 }
